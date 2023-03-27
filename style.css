@@ -1,0 +1,218 @@
+@font-face {
+  font-family: futura;
+  src: url('./fonts/futura_medium_bt.ttf')
+}
+
+:root {
+  --imagem-x: min(60vw, 300px);
+  --imagem-y: min(75vw, 375px);
+  --tamanho-fonte: min(7vw, 35px);
+  --tamanho-icones: min(8vw, 40px);
+  --raio: min(20vw, 100px);
+  --centro-x: min(25.5vw, 127px);
+  --centro-y: min(18.75vw, 93px);
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes giratorio {
+  0% {
+    top: calc((var(--raio) * 0.59) + var(--centro-y));
+    left: calc((var(--raio) * -0.81) + var(--centro-x));
+  }
+
+  5% {
+    top: calc((var(--raio) * 0.31) + var(--centro-y));
+    left: calc((var(--raio) * -0.95) + var(--centro-x));
+  }
+
+  10% {
+    top: calc((var(--raio) * 0) + var(--centro-y));
+    left: calc((var(--raio) * -1) + var(--centro-x));
+  }
+
+  15% {
+    top: calc((var(--raio) * -0.31) + var(--centro-y));
+    left: calc((var(--raio) * -0.95) + var(--centro-x));
+  }
+
+  20% {
+    top: calc((var(--raio) * -0.59) + var(--centro-y));
+    left: calc((var(--raio) * -0.81) + var(--centro-x));
+  }
+
+  25% {
+    top: calc((var(--raio) * -0.81) + var(--centro-y));
+    left: calc((var(--raio) * -0.59) + var(--centro-x));
+  }
+
+  30% {
+    top: calc((var(--raio) * -0.95) + var(--centro-y));
+    left: calc((var(--raio) * -0.31) + var(--centro-x));
+  }
+
+  35% {
+    top: calc((var(--raio) * -1) + var(--centro-y));
+    left: calc((var(--raio) * 0) + var(--centro-x));
+  }
+
+  40% {
+    top: calc((var(--raio) * -0.95) + var(--centro-y));
+    left: calc((var(--raio) * 0.31) + var(--centro-x));
+  }
+
+  45% {
+    top: calc((var(--raio) * -0.81) + var(--centro-y));
+    left: calc((var(--raio) * 0.59) + var(--centro-x));
+  }
+
+  50% {
+    top: calc((var(--raio) * -0.59) + var(--centro-y));
+    left: calc((var(--raio) * 0.81) + var(--centro-x));
+  }
+
+  55% {
+    top: calc((var(--raio) * -0.31) + var(--centro-y));
+    left: calc((var(--raio) * 0.95) + var(--centro-x));
+  }
+
+  60% {
+    top: calc((var(--raio) * 0) + var(--centro-y));
+    left: calc((var(--raio) * 1) + var(--centro-x));
+  }
+
+  65% {
+    top: calc((var(--raio) * 0.31) + var(--centro-y));
+    left: calc((var(--raio) * 0.95) + var(--centro-x));
+  }
+
+  70% {
+    top: calc((var(--raio) * 0.59) + var(--centro-y));
+    left: calc((var(--raio) * 0.81) + var(--centro-x));
+  }
+
+  75% {
+    top: calc((var(--raio) * 0.81) + var(--centro-y));
+    left: calc((var(--raio) * 0.59) + var(--centro-x));
+  }
+
+  80% {
+    top: calc((var(--raio) * 0.95) + var(--centro-y));
+    left: calc((var(--raio) * 0.31) + var(--centro-x));
+  }
+
+  85% {
+    top: calc((var(--raio) * 1) + var(--centro-y));
+    left: calc((var(--raio) * 0) + var(--centro-x));
+  }
+
+  90% {
+    top: calc((var(--raio) * 0.95) + var(--centro-y));
+    left: calc((var(--raio) * -0.31) + var(--centro-x));
+  }
+
+  95% {
+    top: calc((var(--raio) * 0.81) + var(--centro-y));
+    left: calc((var(--raio) * -0.59) + var(--centro-x));
+  }
+
+  100% {
+    top: calc((var(--raio) * 0.59) + var(--centro-y));
+    left: calc((var(--raio) * -0.81) + var(--centro-x));
+  }
+}
+
+html {
+  margin: 10px;
+  font-family: futura, sans-serif;
+}
+
+h1 {
+  text-align: center;
+  font-size: var(--tamanho-fonte);
+}
+
+#servicos {
+  position: relative;
+  background-image: url('./img/businessman.jpeg');
+  background-size: cover;
+  width: var(--imagem-x);
+  height: var(--imagem-y);
+  margin: auto;
+}
+
+#servicos a {
+  top: calc((var(--raio) * 0.59) + var(--centro-y));
+  left: calc((var(--raio) * -0.81) + var(--centro-x));
+  position: absolute;
+}
+
+#servicos a:nth-child(1) {
+  animation: giratorio 10s infinite linear;
+}
+
+#servicos a:nth-child(2) {
+  animation: giratorio 10s infinite linear 2s;
+}
+
+#servicos a:nth-child(3) {
+  animation: giratorio 10s infinite linear 4s;
+}
+
+#servicos a:nth-child(4) {
+  animation: giratorio 10s infinite linear 6s;
+}
+
+#servicos a:nth-child(5) {
+  animation: giratorio 10s infinite linear 8s;
+}
+
+#servicos a:nth-child(1) img {
+  animation: fade-in 1s;
+  animation-fill-mode: forwards;
+}
+
+#servicos a:nth-child(2) img {
+  animation: fade-in 1s ease 1.5s;
+  animation-fill-mode: forwards;
+}
+
+#servicos a:nth-child(3) img {
+  animation: fade-in 1s ease 3.5s;
+  animation-fill-mode: forwards;
+}
+
+#servicos a:nth-child(4) img {
+  animation: fade-in 1s ease 5.5s;
+  animation-fill-mode: forwards;
+}
+
+#servicos a:nth-child(5) img {
+  animation: fade-in 1s ease 7.5s;
+  animation-fill-mode: forwards;
+}
+
+.itens-menu img {
+  width: var(--tamanho-icones);
+  transition-duration: 0.3s;
+  opacity: 0;
+}
+
+.itens-menu img:hover {
+  box-shadow: 0px 0px calc(var(--tamanho-icones) * 0.6) 0px rgba(224, 224, 28, 0.75);
+  background-color: rgb(224, 224, 28, 0.3);
+  width: calc(var(--tamanho-icones) * 1.3);
+  transition-duration: 0.5s;
+}
+
+#servicos:hover a {
+  animation-play-state: paused;
+}
